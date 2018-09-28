@@ -1,9 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, Injector } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { GeolocatorComponent } from "./components/geolocator/geolocator.component";
 
+import { createCustomElement } from "@angular/elements";
 import { Ng4GeoautocompleteModule } from "ng4-geoautocomplete";
 
 @NgModule({
@@ -12,4 +13,12 @@ import { Ng4GeoautocompleteModule } from "ng4-geoautocomplete";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  // public constructor(private injector: Injector) {}
+  // ngDoBootstrap() {
+  //   const el = createCustomElement(GeolocatorComponent, {
+  //     injector: this.injector
+  //   });
+  //   customElements.define("app-geolocator", el);
+  // }
+}
