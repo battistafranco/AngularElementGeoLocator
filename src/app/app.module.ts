@@ -10,6 +10,7 @@ import { Ng4GeoautocompleteModule } from "ng4-geoautocomplete";
 @NgModule({
   declarations: [AppComponent, GeolocatorComponent],
   imports: [BrowserModule, Ng4GeoautocompleteModule.forRoot()],
+  entryComponents: [GeolocatorComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
